@@ -1,0 +1,16 @@
+# The contact options.
+
+- type: github
+  icon: "fab fa-github"
+
+- type: facebook
+  icon: "fab fa-facebook"
+  url: "https://www.facebook.com/groups/163223210377229"
+
+- type: naver-cafe
+  icon: "fas fa-mug-hot"
+  url: "https://cafe.naver.com/knuhaneulso"
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
