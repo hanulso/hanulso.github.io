@@ -6,10 +6,10 @@ order: 4
 
 이 홈페이지는 소식을 모아 두는 곳이고, 이야기는 아래 커뮤니티에서 나눕니다.
 
-| 어디 | 누가 주로 | 바로가기 |
+| 어디 | 특징 | 바로가기 |
 |---|---|---|
-| 페이스북 그룹 | 졸업생 | <https://www.facebook.com/groups/163223210377229> |
-| 네이버 카페 | 재학생 | <https://cafe.naver.com/knuhaneulso> |
+| 페이스북 그룹 | 가입한 회원만 볼 수 있는 그룹 | <https://www.facebook.com/groups/163223210377229> |
+| 네이버 카페 | 요즘 재학생이 주로 쓰는 곳 | <https://cafe.naver.com/knuhaneulso> |
 | GitHub | 홈페이지와 코드 | <https://github.com/hanulso> |
 
 ## 소식이나 기록을 보내는 방법
