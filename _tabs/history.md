@@ -4,7 +4,7 @@ icon: fas fa-landmark
 order: 2
 ---
 
-> 아래 내용은 2006년 하늘소 홈페이지(`hanulso.knu.ac.kr`)의 [연혁](https://web.archive.org/web/20060303234011/http://hanulso.knu.ac.kr/history/history.php)과 [작품](https://web.archive.org/web/20060303234125/http://hanulso.knu.ac.kr/project/project.php) 페이지를 옮긴 것입니다. 빠졌거나 잘못된 것은 알려 주세요.
+> 아래 내용은 2006년 하늘소 홈페이지(`hanulso.knu.ac.kr`)의 [연혁](https://web.archive.org/web/20060303234011/http://hanulso.knu.ac.kr/history/history.php)과 [작품](https://web.archive.org/web/20060303234125/http://hanulso.knu.ac.kr/project/project.php) 페이지를 옮긴 것입니다. 빠졌거나 잘못된 것은 [GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 올려 주세요.
 {: .prompt-info }
 
 ## 1980년대
@@ -43,4 +43,4 @@ order: 2
 - 그 시절 만든 프로그램과 대회 참가 기록
 - 동아리에서 시작한 회사나 활동 소식
 
-알고 계신 일이 있으면 [커뮤니티]({{ '/community/' | relative_url }})에 남기거나 운영진에게 알려 주세요. 하나씩 이 연혁에 더하겠습니다.
+알고 계신 일이 있으면 [GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 올려 주세요. 하나씩 이 연혁에 더하겠습니다. GitHub 계정이 없으시면 [다른 방법]({{ '/community/' | relative_url }}#수정-요청과-제보)도 있습니다.

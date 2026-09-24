@@ -14,7 +14,8 @@
 | `_tabs/history.md` | 연혁 |
 | `_tabs/works.md` | 작품 |
 | `_tabs/people.md` | 하늘소 사람들 (명단은 `_data/people.yml`) |
-| `_tabs/community.md` | 커뮤니티 링크, 제보 방법, 운영진 |
+| `_tabs/community.md` | 커뮤니티 링크, 수정 요청·제보 방법, 운영진 |
+| `.github/ISSUE_TEMPLATE/` | 이슈 양식 (수정 요청, 기록·소식 제보) |
 | `_posts/` | 소식과 기록 글 |
 | `assets/img/` | 이미지 |
 | `_config.yml` | 사이트 설정 |
@@ -81,6 +82,14 @@ bundle exec jekyll serve
 3. 이 저장소의 **Settings → Collaborators and teams**에서 `maintainers` 팀에 **Write** 권한을 줍니다.
 
 Write 권한이 있으면 `main`에 바로 push할 수 있고, push하면 사이트에 반영됩니다. 운영진이 아닌 분은 이슈나 Pull Request로 보내 주시면 운영진이 검토해서 합칩니다.
+
+## 수정 요청 처리
+
+사이트의 모든 수정 요청·제보 안내는 [이슈](https://github.com/hanulso/hanulso.github.io/issues)로 모이게 되어 있습니다.
+
+1. 이슈를 보고 내용을 반영합니다. 커밋 메시지에 `Fixes #번호`를 쓰면 push할 때 이슈가 자동으로 닫힙니다.
+2. 명단에서 빼 달라는 요청은 확인되는 대로 먼저 처리합니다.
+3. 페이스북·카페로 들어온 요청은 운영진이 이슈로 옮겨 두고 처리합니다. 누가 무엇을 요청했는지 한곳에 남기기 위해서입니다.
 
 ## 처음 한 번만 하는 설정
 

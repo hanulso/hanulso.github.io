@@ -6,7 +6,7 @@ order: 3
 
 하늘소 회원들이 대회, 전시회, 동아리 사업으로 만든 작품입니다. 2006년 홈페이지의 [하늘소작품](https://web.archive.org/web/20060303234125/http://hanulso.knu.ac.kr/project/project.php) 페이지를 옮기며 설명을 줄였습니다. 참여자는 당시 표기대로 기수와 이름을 적었습니다.
 
-> 이 목록은 2005년에서 멈춰 있습니다. 그 뒤의 작품이나, 설명이 비어 있는 작품을 아시는 분은 알려 주세요.
+> 이 목록은 2005년에서 멈춰 있습니다. 그 뒤의 작품이나, 설명이 비어 있는 작품을 아시는 분은 [GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 올려 주세요.
 {: .prompt-tip }
 
 ## 초기 작품
