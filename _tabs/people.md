@@ -28,7 +28,7 @@ order: 4
 ## 기수별 명단
 
 {% for g in site.data.people %}
-<h3 id="gen-{{ g.gen | slugify }}">{{ g.gen }}기{% if g.hakbun %} <small class="text-muted">· {{ g.hakbun }}학번</small>{% endif %}</h3>
+<h3 id="gen-{{ g.gen | slugify }}">{{ g.gen }}기</h3>
 {% if g.note %}<p class="text-muted">{{ g.note }}</p>{% endif %}
 {% if g.members.size == 0 %}
 <p class="text-muted">명단에 올라온 분이 없습니다.</p>

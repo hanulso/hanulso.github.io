@@ -3,13 +3,11 @@
 # 연락처·메일·거주지·직업 같은 정보는 여기에 넣지 않는다.
 #
 # gen   : 기수 표기. 제목에 「<gen>기」로 나온다
-# hakbun: 그 기수의 대표 학번(가장 많은 학번). 제목 옆에 나온다
 # members[].hakbun  : 본인 학번. 비워도 된다
 # members[].homepage: 옛 명단의 홈페이지. 사이트에서는 Wayback 사본으로 연결한다
 # members[].link    : 지금 쓰는 주소. 있으면 homepage 대신 이 주소로 연결한다
 
 - gen: "1"
-  hakbun: "87"
   members:
     - name: "이종우"
       hakbun: "87"
@@ -27,20 +25,17 @@
       hakbun: "87"
 
 - gen: "2"
-  hakbun: "88"
   members:
     - name: "이영상"
       hakbun: "88"
       homepage: "http://www.elthe.com"
 
 - gen: "2.5"
-  hakbun: "88"
   members:
     - name: "김상억"
       hakbun: "88"
 
 - gen: "3"
-  hakbun: "89"
   members:
     - name: "이동준"
       hakbun: "89"
@@ -61,7 +56,6 @@
   members: []
 
 - gen: "5"
-  hakbun: "90"
   members:
     - name: "오정국"
       hakbun: "90"
@@ -86,7 +80,6 @@
     - name: "김지현"
 
 - gen: "6"
-  hakbun: "91"
   members:
     - name: "최성훈"
       hakbun: "91"
@@ -100,7 +93,6 @@
       hakbun: "91"
 
 - gen: "7"
-  hakbun: "92"
   members:
     - name: "진학성"
       hakbun: "92"
@@ -141,7 +133,6 @@
       hakbun: "92"
 
 - gen: "신7"
-  hakbun: "93"
   members:
     - name: "이제형"
       hakbun: "93"
@@ -149,7 +140,6 @@
       hakbun: "93"
 
 - gen: "8"
-  hakbun: "94"
   members:
     - name: "김수민"
       hakbun: "94"
@@ -163,7 +153,6 @@
       hakbun: "94"
 
 - gen: "9"
-  hakbun: "94"
   members:
     - name: "김근우"
       hakbun: "95"
@@ -181,7 +170,6 @@
       hakbun: "95"
 
 - gen: "10"
-  hakbun: "96"
   members:
     - name: "심준형"
       hakbun: "95"
@@ -191,7 +179,6 @@
       hakbun: "96"
 
 - gen: "11"
-  hakbun: "97"
   members:
     - name: "권동현"
       hakbun: "97"
@@ -208,7 +195,6 @@
       hakbun: "97"
 
 - gen: "12"
-  hakbun: "98"
   members:
     - name: "박기홍"
       hakbun: "98"
@@ -223,7 +209,6 @@
       homepage: "http://hanulso.knu.ac.kr/~spbrain"
 
 - gen: "13"
-  hakbun: "99"
   members:
     - name: "곽준욱"
       hakbun: "99"
@@ -247,14 +232,12 @@
     - name: "이상민"
 
 - gen: "14"
-  hakbun: "00"
   members:
     - name: "최희백"
       hakbun: "00"
     - name: "손주동"
 
 - gen: "15"
-  hakbun: "01"
   members:
     - name: "서원경"
       hakbun: "01"
@@ -266,7 +249,6 @@
       hakbun: "01"
 
 - gen: "16"
-  hakbun: "02"
   members:
     - name: "이안석"
       hakbun: "02"
@@ -275,7 +257,6 @@
       hakbun: "02"
 
 - gen: "17"
-  hakbun: "03"
   members:
     - name: "김창곤"
       hakbun: "03"
@@ -283,7 +264,6 @@
     - name: "최우승"
 
 - gen: "18"
-  hakbun: "04"
   members:
     - name: "김경륜"
       hakbun: "04"
@@ -302,7 +282,6 @@
     - name: "이수헌"
 
 - gen: "19"
-  hakbun: "05"
   members:
     - name: "박지수"
       hakbun: "05"
@@ -314,7 +293,6 @@
     - name: "문병욱"
 
 - gen: "20"
-  hakbun: "05"
   members:
     - name: "장지훈"
       hakbun: "05"
@@ -338,13 +316,11 @@
   members: []
 
 - gen: "24"
-  hakbun: "07"
   members:
     - name: "윤승용"
       hakbun: "07"
 
 - gen: "24/25"
-  hakbun: "06"
   note: "주소록에 「24? 25?」로 적혀 있어 기수 확인이 필요합니다."
   members:
     - name: "손주식"

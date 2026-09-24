@@ -46,7 +46,6 @@ tags: [모임]
 
 ```yaml
 - gen: "21"
-  hakbun: "06"          # 그 기수의 대표 학번. 제목 옆에 나온다
   members:
     - name: "홍길동"
       hakbun: "06"
