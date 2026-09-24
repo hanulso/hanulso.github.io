@@ -47,8 +47,6 @@ tags: [모임]
 ```yaml
 - gen: 21
   name: "홍길동"
-  nick: "길동"
-  id: "gildong"
   link: "https://github.com/gildong"   # 지금 쓰는 주소. 있으면 이 주소로 연결한다
 ```
 

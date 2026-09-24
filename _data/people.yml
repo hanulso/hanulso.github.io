@@ -5,203 +5,125 @@
 
 - gen: 2
   name: "이영상"
-  id: "kenlee"
-
-- gen: 2
-  name: "이영상"
-  id: "이영상"
   homepage: "http://www.elthe.com"
 
 - gen: 7
-  name: "아망"
-  nick: "아망"
-  id: "amang"
-
-- gen: 7
   name: "이영후"
-  id: "이영후"
   homepage: "http://lvmee.cafe24.com"
 
 - gen: 8
   name: "김준형"
-  nick: "simpler"
-  id: "Lach"
 
 - gen: 11
   name: "권동현"
-  nick: "A.G."
-  id: "jetsu"
   homepage: "http://hanulso.knu.ac.kr/~jetsu"
 
 - gen: 11
   name: "김현웅"
-  id: "Solomon"
 
 - gen: 11
   name: "서승민"
-  nick: "mini"
-  id: "mini"
 
 - gen: 11
   name: "선진욱"
-  id: "pwsun"
 
 - gen: 11
   name: "이장우"
-  id: "fightclub"
 
 - gen: 12
   name: "박기홍"
-  id: "diaia"
 
 - gen: 12
   name: "조영대"
-  nick: "시벨스"
-  id: "cbels"
 
 - gen: 12
   name: "최성철"
-  nick: "초리"
-  id: "spbrain"
   homepage: "http://hanulso.knu.ac.kr/~spbrain"
 
 - gen: 13
-  name: "ghost"
-  nick: "ghost"
-  id: "ghost"
-  homepage: "http://hanulso.knu.ac.kr/~ghost"
-
-- gen: 13
   name: "곽준욱"
-  nick: "바-_-리"
-  id: "bpwook"
   homepage: "http://www.bpwook.net"
 
 - gen: 13
   name: "박지은"
-  nick: "muse"
-  id: "puritymuse"
   homepage: "http://blog.naver.com/puritymuse"
 
 - gen: 13
   name: "이상민"
-  id: "assistjjang"
 
 - gen: 13
   name: "이창식"
-  id: "MoonLight"
 
 - gen: 13
   name: "이혜정"
-  nick: "snowdrop"
-  id: "snowdrop"
 
 - gen: 13
   name: "최광호"
-  nick: "BSPFP"
-  id: "bs"
   homepage: "http://bspfp.pe.kr"
 
 - gen: 14
   name: "손주동"
-  id: "주딩이"
 
 - gen: 15
   name: "곽효석"
-  nick: "효석"
-  id: "onino"
 
 - gen: 15
   name: "김태현"
-  nick: "Free~"
-  id: "free"
 
 - gen: 15
   name: "서원경"
-  nick: "morglory"
-  id: "morglory"
 
 - gen: 16
   name: "이안석"
-  nick: "꿈꾸는소년"
-  id: "anseok"
   homepage: "http://hanulso.knu.ac.kr/~anseok"
 
 - gen: 16
   name: "차정현"
-  nick: "차정현"
-  id: "carnun"
 
 - gen: 17
   name: "오성민"
-  nick: "성민"
-  id: "dawnhero"
 
 - gen: 17
   name: "최우승"
-  id: "azrael8903"
 
 - gen: 18
   name: "김경륜"
-  nick: "류니"
-  id: "kklyoon"
 
 - gen: 18
   name: "김준호"
-  nick: "김준호"
-  id: "junho85"
   homepage: "http://hanulso.knu.ac.kr/~junho85"
 
 - gen: 18
   name: "김현동"
-  nick: "tertis"
-  id: "tertis"
 
 - gen: 18
   name: "박경렬"
-  id: "saltidea"
   homepage: "http://fitlemon.woobi.co.kr"
 
 - gen: 18
   name: "이수헌"
-  id: "lsh5782"
 
 - gen: 18
   name: "이승환"
-  nick: "승환"
-  id: "leeyi1"
 
 - gen: 18
   name: "조용호"
-  nick: "띵호야~"
-  id: "zyongho"
 
 - gen: 18
   name: "최종문"
-  id: "jmchoi1234"
 
 - gen: 19
   name: "김새롬"
-  nick: "새롬"
-  id: "romynim"
 
 - gen: 19
   name: "문병욱"
-  nick: "Kira"
-  id: "Kira"
 
 - gen: 19
   name: "박지수"
-  nick: "푸른맹금"
-  id: "bluehwak"
   homepage: "http://bluehwak.egloos.com"
 
 - gen: 19
   name: "오한빈"
-  nick: "Bin"
-  id: "myrilke"
 
 - gen: 19
   name: "한승욱"
-  nick: "한승욱"
-  id: "han65535"

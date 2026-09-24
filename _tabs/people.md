@@ -19,13 +19,11 @@ order: 4
 <p class="text-muted">명단에 올라온 분이 없습니다.</p>
 {% else %}
 <div class="table-wrapper"><table>
-<thead><tr><th>이름</th><th>닉네임</th><th>아이디</th><th>홈페이지</th></tr></thead>
+<thead><tr><th>이름</th><th>홈페이지</th></tr></thead>
 <tbody>
 {% for p in members %}
 <tr>
 <td>{{ p.name }}</td>
-<td>{{ p.nick }}</td>
-<td>{{ p.id }}</td>
 <td>{% if p.link %}<a href="{{ p.link }}">{{ p.link | remove: 'https://' | remove: 'http://' }}</a>{% elsif p.homepage %}<a href="https://web.archive.org/web/2006/{{ p.homepage }}">{{ p.homepage | remove: 'http://' }}</a>{% endif %}</td>
 </tr>
 {% endfor %}
