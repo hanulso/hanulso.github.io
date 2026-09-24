@@ -43,4 +43,4 @@ order: 2
 - 그 시절 만든 프로그램과 대회 참가 기록
 - 동아리에서 시작한 회사나 활동 소식
 
-알고 계신 일이 있으면 [GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 올려 주세요. 하나씩 이 연혁에 더하겠습니다. GitHub 계정이 없으시면 [다른 방법]({{ '/community/' | relative_url }}#수정-요청과-제보)도 있습니다.
+알고 계신 일을 [GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 알려 주시면 하나씩 이 연혁에 더하겠습니다. GitHub 계정이 없으시면 [다른 방법]({{ '/community/' | relative_url }}#수정-요청과-제보)도 있습니다.
