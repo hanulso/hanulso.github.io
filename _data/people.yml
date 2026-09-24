@@ -1,129 +1,360 @@
-# 하늘소 사람들 명단.
-# 2006년 9월 하늘소 홈페이지(hanulso.knu.ac.kr/people/people.php)의 명단을 옮겼다.
-# homepage 는 당시 적힌 주소다. 사이트에서는 Wayback 사본으로 연결한다.
-# 새로 넣을 때는 gen(기수), name 은 꼭 채우고 나머지는 비워 둬도 된다. link 에 지금 쓰는 주소를 넣으면 homepage 대신 그 주소로 연결한다.
+# 하늘소 사람들 명단 (기수별).
+# 출처: 동아리 주소록(비공개, 기수·이름·학번만 옮김)과 2006년 9월 하늘소 홈페이지 명단.
+# 연락처·메일·거주지·직업 같은 정보는 여기에 넣지 않는다.
+#
+# gen   : 기수 표기. 제목에 「<gen>기」로 나온다
+# hakbun: 그 기수의 대표 학번(가장 많은 학번). 제목 옆에 나온다
+# members[].hakbun  : 본인 학번. 비워도 된다
+# members[].homepage: 옛 명단의 홈페이지. 사이트에서는 Wayback 사본으로 연결한다
+# members[].link    : 지금 쓰는 주소. 있으면 homepage 대신 이 주소로 연결한다
 
-- gen: 2
-  name: "이영상"
-  homepage: "http://www.elthe.com"
+- gen: "1"
+  hakbun: "87"
+  members:
+    - name: "이종우"
+      hakbun: "87"
+    - name: "장병탁"
+      hakbun: "87"
+    - name: "정재흠"
+      hakbun: "87"
+    - name: "조승모"
+      hakbun: "87"
+    - name: "황태욱"
+      hakbun: "87"
+    - name: "허재철"
+      hakbun: "88"
+    - name: "성기배"
+      hakbun: "87"
 
-- gen: 7
-  name: "이영후"
-  homepage: "http://lvmee.cafe24.com"
+- gen: "2"
+  hakbun: "88"
+  members:
+    - name: "이영상"
+      hakbun: "88"
+      homepage: "http://www.elthe.com"
 
-- gen: 8
-  name: "김준형"
+- gen: "2.5"
+  hakbun: "88"
+  members:
+    - name: "김상억"
+      hakbun: "88"
 
-- gen: 11
-  name: "권동현"
-  homepage: "http://hanulso.knu.ac.kr/~jetsu"
+- gen: "3"
+  hakbun: "89"
+  members:
+    - name: "이동준"
+      hakbun: "89"
+    - name: "홍정우"
+      hakbun: "89"
+    - name: "한상헌"
+      hakbun: "89"
+    - name: "최경록"
+      hakbun: "89"
+    - name: "이상호"
+      hakbun: "89"
+    - name: "박미룡"
+      hakbun: "86"
+    - name: "이상호"
+      hakbun: "89"
 
-- gen: 11
-  name: "김현웅"
+- gen: "4"
+  members: []
 
-- gen: 11
-  name: "서승민"
+- gen: "5"
+  hakbun: "90"
+  members:
+    - name: "오정국"
+      hakbun: "90"
+    - name: "김광렬"
+      hakbun: "90"
+    - name: "김병운"
+      hakbun: "90"
+    - name: "김성중"
+      hakbun: "90"
+    - name: "이재욱"
+      hakbun: "90"
+    - name: "이동훈"
+      hakbun: "90"
+    - name: "이정호"
+      hakbun: "90"
+    - name: "이준규"
+      hakbun: "91"
+    - name: "임효상"
+      hakbun: "90"
+    - name: "김창가"
+      hakbun: "91"
+    - name: "김지현"
 
-- gen: 11
-  name: "선진욱"
+- gen: "6"
+  hakbun: "91"
+  members:
+    - name: "최성훈"
+      hakbun: "91"
+    - name: "배혁"
+      hakbun: "90"
+    - name: "성시훈"
+      hakbun: "91"
+    - name: "장대근"
+      hakbun: "91"
+    - name: "정상수"
+      hakbun: "91"
 
-- gen: 11
-  name: "이장우"
+- gen: "7"
+  hakbun: "92"
+  members:
+    - name: "진학성"
+      hakbun: "92"
+    - name: "장윤종"
+      hakbun: "93"
+    - name: "임희진"
+      hakbun: "93"
+    - name: "이영후"
+      hakbun: "92"
+      homepage: "http://lvmee.cafe24.com"
+    - name: "송유창"
+      hakbun: "92"
+    - name: "이상도"
+      hakbun: "92"
+    - name: "이상호"
+      hakbun: "92"
+    - name: "이달희"
+      hakbun: "93"
+    - name: "양상호"
+      hakbun: "93"
+    - name: "김송규"
+      hakbun: "92"
+    - name: "김옥구"
+      hakbun: "93"
+    - name: "김은정"
+      hakbun: "93"
+    - name: "김준우"
+      hakbun: "92"
+    - name: "남광호"
+      hakbun: "92"
+    - name: "도현종"
+      hakbun: "92"
+    - name: "문재철"
+      hakbun: "92"
+    - name: "박성실(女)"
+      hakbun: "91"
+    - name: "배태면"
+      hakbun: "92"
 
-- gen: 12
-  name: "박기홍"
+- gen: "신7"
+  hakbun: "93"
+  members:
+    - name: "이제형"
+      hakbun: "93"
+    - name: "심화석"
+      hakbun: "93"
 
-- gen: 12
-  name: "조영대"
+- gen: "8"
+  hakbun: "94"
+  members:
+    - name: "김수민"
+      hakbun: "94"
+    - name: "신정훈"
+      hakbun: "94"
+    - name: "박두열"
+      hakbun: "94"
+    - name: "김준형"
+      hakbun: "94"
+    - name: "홍종택"
+      hakbun: "94"
 
-- gen: 12
-  name: "최성철"
-  homepage: "http://hanulso.knu.ac.kr/~spbrain"
+- gen: "9"
+  hakbun: "94"
+  members:
+    - name: "김근우"
+      hakbun: "95"
+    - name: "박동환"
+      hakbun: "94"
+    - name: "박준호"
+      hakbun: "94"
+    - name: "배대호"
+      hakbun: "94"
+    - name: "이동환"
+      hakbun: "95"
+    - name: "이효근"
+      hakbun: "94"
+    - name: "정철규"
+      hakbun: "95"
 
-- gen: 13
-  name: "곽준욱"
-  homepage: "http://www.bpwook.net"
+- gen: "10"
+  hakbun: "96"
+  members:
+    - name: "심준형"
+      hakbun: "95"
+    - name: "한혜영"
+      hakbun: "96"
+    - name: "조인영"
+      hakbun: "96"
 
-- gen: 13
-  name: "박지은"
-  homepage: "http://blog.naver.com/puritymuse"
+- gen: "11"
+  hakbun: "97"
+  members:
+    - name: "권동현"
+      hakbun: "97"
+      homepage: "http://hanulso.knu.ac.kr/~jetsu"
+    - name: "김현웅"
+      hakbun: "97"
+    - name: "서승민"
+      hakbun: "97"
+    - name: "선진욱"
+      hakbun: "97"
+    - name: "이장우"
+      hakbun: "97"
+    - name: "전대곤"
+      hakbun: "97"
 
-- gen: 13
-  name: "이상민"
+- gen: "12"
+  hakbun: "98"
+  members:
+    - name: "박기홍"
+      hakbun: "98"
+    - name: "조영대"
+      hakbun: "98"
+    - name: "김영재"
+      hakbun: "98"
+    - name: "한동호"
+      hakbun: "98"
+    - name: "최성철"
+      hakbun: "98"
+      homepage: "http://hanulso.knu.ac.kr/~spbrain"
 
-- gen: 13
-  name: "이창식"
+- gen: "13"
+  hakbun: "99"
+  members:
+    - name: "곽준욱"
+      hakbun: "99"
+      homepage: "http://www.bpwook.net"
+    - name: "윤미경"
+      hakbun: "99"
+    - name: "이창식"
+      hakbun: "98"
+    - name: "김성호"
+      hakbun: "99"
+    - name: "박지은"
+      hakbun: "99"
+      homepage: "http://blog.naver.com/puritymuse"
+    - name: "이보경"
+      hakbun: "99"
+    - name: "이혜정"
+      hakbun: "99"
+    - name: "최광호"
+      hakbun: "99"
+      homepage: "http://bspfp.pe.kr"
+    - name: "이상민"
 
-- gen: 13
-  name: "이혜정"
+- gen: "14"
+  hakbun: "00"
+  members:
+    - name: "최희백"
+      hakbun: "00"
+    - name: "손주동"
 
-- gen: 13
-  name: "최광호"
-  homepage: "http://bspfp.pe.kr"
+- gen: "15"
+  hakbun: "01"
+  members:
+    - name: "서원경"
+      hakbun: "01"
+    - name: "김태현"
+      hakbun: "00"
+    - name: "곽효석"
+      hakbun: "01"
+    - name: "백종복"
+      hakbun: "01"
 
-- gen: 14
-  name: "손주동"
+- gen: "16"
+  hakbun: "02"
+  members:
+    - name: "이안석"
+      hakbun: "02"
+      homepage: "http://hanulso.knu.ac.kr/~anseok"
+    - name: "차정현"
+      hakbun: "02"
 
-- gen: 15
-  name: "곽효석"
+- gen: "17"
+  hakbun: "03"
+  members:
+    - name: "김창곤"
+      hakbun: "03"
+    - name: "오성민"
+    - name: "최우승"
 
-- gen: 15
-  name: "김태현"
+- gen: "18"
+  hakbun: "04"
+  members:
+    - name: "김경륜"
+      hakbun: "04"
+    - name: "김준호"
+      hakbun: "04"
+      homepage: "http://hanulso.knu.ac.kr/~junho85"
+    - name: "김현동"
+      hakbun: "04"
+    - name: "조용호"
+      hakbun: "04"
+    - name: "박경렬"
+      hakbun: "04"
+      homepage: "http://fitlemon.woobi.co.kr"
+    - name: "이승환"
+      hakbun: "04"
+    - name: "이수헌"
 
-- gen: 15
-  name: "서원경"
+- gen: "19"
+  hakbun: "05"
+  members:
+    - name: "박지수"
+      hakbun: "05"
+      homepage: "http://bluehwak.egloos.com"
+    - name: "오한빈"
+      hakbun: "05"
+    - name: "한승욱"
+      hakbun: "05"
+    - name: "문병욱"
 
-- gen: 16
-  name: "이안석"
-  homepage: "http://hanulso.knu.ac.kr/~anseok"
+- gen: "20"
+  hakbun: "05"
+  members:
+    - name: "장지훈"
+      hakbun: "05"
+    - name: "한승욱"
+      hakbun: "05"
+    - name: "서정인"
+      hakbun: "05"
+    - name: "이인동"
+      hakbun: "05"
 
-- gen: 16
-  name: "차정현"
+- gen: "21"
+  members:
+    - name: "김동근"
+    - name: "배현진"
 
-- gen: 17
-  name: "오성민"
+- gen: "22"
+  members:
+    - name: "석재호"
 
-- gen: 17
-  name: "최우승"
+- gen: "23"
+  members: []
 
-- gen: 18
-  name: "김경륜"
+- gen: "24"
+  hakbun: "07"
+  members:
+    - name: "윤승용"
+      hakbun: "07"
 
-- gen: 18
-  name: "김준호"
-  homepage: "http://hanulso.knu.ac.kr/~junho85"
+- gen: "24/25"
+  hakbun: "06"
+  note: "주소록에 「24? 25?」로 적혀 있어 기수 확인이 필요합니다."
+  members:
+    - name: "손주식"
+      hakbun: "06"
 
-- gen: 18
-  name: "김현동"
+- gen: "25"
+  members: []
 
-- gen: 18
-  name: "박경렬"
-  homepage: "http://fitlemon.woobi.co.kr"
+- gen: "26"
+  members: []
 
-- gen: 18
-  name: "이수헌"
-
-- gen: 18
-  name: "이승환"
-
-- gen: 18
-  name: "조용호"
-
-- gen: 18
-  name: "최종문"
-
-- gen: 19
-  name: "김새롬"
-
-- gen: 19
-  name: "문병욱"
-
-- gen: 19
-  name: "박지수"
-  homepage: "http://bluehwak.egloos.com"
-
-- gen: 19
-  name: "오한빈"
-
-- gen: 19
-  name: "한승욱"
+- gen: "27"
+  members: []
