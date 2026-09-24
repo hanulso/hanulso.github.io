@@ -14,6 +14,7 @@
 | `_tabs/history.md` | 연혁 |
 | `_tabs/works.md` | 작품 |
 | `_tabs/people.md` | 하늘소 사람들 (명단은 `_data/people.yml`) |
+| `_tabs/press.md` | 언론 기록 (스크린샷은 `assets/img/press/`, 원본 보관은 저장소 밖) |
 | `_tabs/community.md` | 커뮤니티 링크, 수정 요청·제보 방법, 운영진 |
 | `.github/ISSUE_TEMPLATE/` | 이슈 양식 (수정 요청, 기록·소식 제보) |
 | `_posts/` | 소식과 기록 글 |
@@ -82,6 +83,15 @@ bundle exec jekyll serve
 3. 이 저장소의 **Settings → Collaborators and teams**에서 `maintainers` 팀에 **Write** 권한을 줍니다.
 
 Write 권한이 있으면 `main`에 바로 push할 수 있고, push하면 사이트에 반영됩니다. 운영진이 아닌 분은 이슈나 Pull Request로 보내 주시면 운영진이 검토해서 합칩니다.
+
+## 댓글
+
+글과 페이지(소개·연혁·작품·사람들·언론 기록·커뮤니티) 아래에 [giscus](https://giscus.app) 댓글이 붙는다.
+
+- 댓글은 이 저장소의 [Discussions](https://github.com/hanulso/hanulso.github.io/discussions) 「Announcements」 카테고리에 페이지 경로별 토론으로 쌓인다. 삭제·숨기기 같은 관리는 Discussions에서 한다
+- 댓글을 쓰려면 GitHub 로그인이 필요하다. 읽기는 누구나 된다
+- giscus 앱이 조직에 설치돼 있어야 동작한다: <https://github.com/apps/giscus>
+- 설정은 `_config.yml`의 `comments`. 페이지에 댓글을 붙이려고 테마의 page 레이아웃을 `_layouts/page.html`로 덮어썼다. 카테고리·태그·아카이브 탭은 `comments: false`
 
 ## 수정 요청 처리
 

@@ -1,7 +1,7 @@
 ---
 title: 커뮤니티
 icon: fas fa-users
-order: 5
+order: 6
 ---
 
 소식은 이 홈페이지에 모으고 이야기는 아래 커뮤니티에서 나눕니다.
@@ -17,6 +17,7 @@ order: 5
 홈페이지 내용을 고쳐 달라는 요청이나 새 소식·기록 제보는 **[GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 올려 주세요.** 운영진이 이슈를 보고 반영한 뒤 이슈를 닫습니다.
 
 - **이슈 올리기**: [New issue](https://github.com/hanulso/hanulso.github.io/issues/new/choose)를 누르고 「수정 요청」이나 「기록·소식 제보」 양식을 고릅니다. GitHub 계정이 필요합니다.
+- **댓글 달기**: 각 페이지와 글 아래에 댓글을 달 수 있습니다. GitHub 계정으로 로그인합니다. 가벼운 정정이나 기억나는 일은 댓글로 남겨 주셔도 됩니다.
 - **직접 고치기**: 글 아래의 「이 글 편집」으로 고쳐서 Pull Request를 보내셔도 됩니다.
 - **계정이 없을 때**: 페이스북 그룹이나 네이버 카페에 올리고 운영진을 불러 주세요. 운영진이 대신 이슈로 옮깁니다.
 

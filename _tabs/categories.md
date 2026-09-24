@@ -1,5 +1,6 @@
 ---
 layout: categories
 icon: fas fa-stream
-order: 6
+order: 7
+comments: false
 ---
