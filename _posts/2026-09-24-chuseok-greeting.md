@@ -4,8 +4,8 @@ date: 2026-09-24 19:30:00 +0900
 categories: [소식]
 tags: [추석, 영상, AI]
 image:
-  path: /assets/img/posts/2026-09-24-chuseok/poster.jpg
-  alt: 보름달 아래에서 하늘소 친구들이 손을 흔드는 엔딩 장면
+  path: /assets/img/posts/2026-09-24-chuseok/header.jpg
+  alt: 하늘소가 모아 온 송편으로 반달의 빈 쪽을 채우는 장면
 ---
 
 풍성한 한가위 보내세요. 동아리 마스코트 하늘소가 전통놀이로 송편을 모아 보름달을 채우는 인사 영상을 만들었습니다.
