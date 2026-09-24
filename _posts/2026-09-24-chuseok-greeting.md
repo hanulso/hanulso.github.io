@@ -81,6 +81,15 @@ AI 코딩 도구(Claude Code)와 함께 코드로 그렸습니다. 그림 도구
 
 같은 스토리보드와 소리로, HTML로 영상을 만드는 도구 [HyperFrames](https://hyperframes.heygen.com)를 써서 한 번 더 만들었습니다. 캐릭터는 SVG로 옮기고, 움직임은 GSAP 타임라인으로 짰습니다. 손그림 떨림은 SVG 노이즈 필터로 냈습니다. 두 버전의 화면은 거의 같게 나왔습니다.
 
+아래는 HyperFrames 버전입니다. 동영상 파일이 아니라 브라우저가 HTML을 그 자리에서 그리며 재생합니다. 재생 버튼을 누르면 소리도 함께 나옵니다.
+
+<div style="width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; margin: 1rem 0 0.5rem;">
+  <hyperframes-player src="{{ '/assets/hyperframes/chuseok/index.html' | relative_url }}" controls style="display: block; width: 100%; height: 100%;"></hyperframes-player>
+</div>
+<script src="{{ '/assets/hyperframes/chuseok/player.js' | relative_url }}"></script>
+
+재생기와 런타임은 [HyperFrames](https://github.com/heygen-com/hyperframes)의 것을 그대로 올렸습니다([Apache-2.0]({{ '/assets/hyperframes/chuseok/LICENSE-hyperframes.txt' | relative_url }})).
+
 ![같은 시각의 두 버전 비교](/assets/img/posts/2026-09-24-chuseok/compare.jpg)
 _왼쪽이 Python 버전, 오른쪽이 HyperFrames 버전입니다._
 

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <script src="runtime.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>하늘소 한가위 대작전</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #0a0a12; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; }
+      [data-composition-id="main"] > div[data-composition-src] { position: absolute; inset: 0; }
+      /* 종이 질감·비네트: Python 버전과 같은 텍스처(src/core.py make_paper)를 SOFT_LIGHT 로 덮는다.
+         DOM 요소로 두면 레이아웃 감사가 모든 글자를 "가려졌다"고 판정해서 #root 의 가상 요소로 둔다. */
+      #root::before, #root::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-size: 100% 100%; }
+      #root::before { z-index: 50; background-image: url("assets/vignette.png"); }
+      #root::after { z-index: 51; background-image: url("assets/paper.png"); mix-blend-mode: soft-light; opacity: 0.9; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="52.5000">
+      <div id="el-open" data-composition-id="open" data-composition-src="compositions/open.html"
+        data-start="0.0000" data-duration="5.6250" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-mission" data-composition-id="mission" data-composition-src="compositions/mission.html"
+        data-start="5.6250" data-duration="3.7500" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-yut" data-composition-id="yut" data-composition-src="compositions/yut.html"
+        data-start="9.3750" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-jegi" data-composition-id="jegi" data-composition-src="compositions/jegi.html"
+        data-start="14.0625" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-tuho" data-composition-id="tuho" data-composition-src="compositions/tuho.html"
+        data-start="18.7500" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-top" data-composition-id="top" data-composition-src="compositions/top.html"
+        data-start="23.4375" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-kite" data-composition-id="kite" data-composition-src="compositions/kite.html"
+        data-start="28.1250" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-gang" data-composition-id="gang" data-composition-src="compositions/gang.html"
+        data-start="32.8125" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-neol" data-composition-id="neol" data-composition-src="compositions/neol.html"
+        data-start="37.5000" data-duration="5.6250" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-fill" data-composition-id="fill" data-composition-src="compositions/fill.html"
+        data-start="43.1250" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-end" data-composition-id="end" data-composition-src="compositions/end.html"
+        data-start="47.8125" data-duration="4.6875" data-track-index="1" data-width="1920" data-height="1080"></div>
+      <div id="el-overlay" data-composition-id="overlay" data-composition-src="compositions/overlay.html"
+        data-start="0.0000" data-duration="52.5000" data-track-index="2" data-width="1920" data-height="1080"></div>
+      <audio id="el-audio" src="assets/audio.m4a" data-start="0" data-duration="52.5000" data-track-index="10" data-volume="1"></audio>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
