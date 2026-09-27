@@ -1,0 +1,245 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ─────────────────────────────────────────────────────────────
+   하늘소 테마 — 테마(jekyll-theme-chirpy 7.6.0) 위에 색·글꼴만 덮어쓴다.
+   기준은 2000년대 hanulso.knu.ac.kr: 구름 낀 하늘 배너, 강철빛 하늘색 메뉴 머리
+   (#76A6BE 바탕 + #337799 밑줄), 바탕체. 금빛은 마스코트(날개 달린 한우)에서.
+   어두운 화면은 같은 하늘을 어둡게 눌러 「밤하늘」로 옮겼다.
+   ───────────────────────────────────────────────────────────── */
+
+@mixin hanulso-light {
+  --hs-deep: #337799;          /* 옛 메뉴 머리 밑줄 */
+  --hs-sky: #76a6be;           /* 옛 메뉴 머리 바탕 */
+  --hs-sky-soft: #eaf3f8;
+  --hs-ink: #1d3b4f;
+  --hs-gold: #c68a24;          /* 마스코트 금빛 */
+  --hs-sky-img: url('/assets/img/theme/sky-2007.jpg');
+  --hs-sky-filter: none;
+  --hs-sky-veil: linear-gradient(transparent, transparent);
+  --hs-active: #337799;
+
+  --main-bg: #fbfdfe;
+  --heading-color: var(--hs-ink);
+  --link-color: #2a6a8e;
+  --link-underline-color: #bfd8e6;
+  --sidebar-bg: linear-gradient(180deg, #d6eaf6 0%, #e9f4fa 38%, #f5fafd 100%);
+  --sidebar-border-color: #d5e6ef;
+  --sidebar-muted-color: #3f5f72;
+  --sidebar-active-color: #ffffff;
+  --sidebar-hover-bg: rgb(118 166 190 / 22%);
+  --sidebar-btn-bg: rgb(255 255 255 / 70%);
+  --sidebar-btn-color: #4e7488;
+  --site-title-color: var(--hs-ink);
+  --site-subtitle-color: #4a6a7d;
+  --avatar-border-color: #ffffff;
+  --topbar-bg: rgb(251 253 254 / 78%);
+  --btn-paginator-hover-color: var(--hs-sky-soft);
+  --toc-highlight: var(--hs-deep);
+  --card-bg: #ffffff;
+  --card-hover-bg: var(--hs-sky-soft);
+  --tag-border: #c6dce8;
+  --tag-hover: #dcebf3;
+  --blockquote-border-color: var(--hs-sky);
+  --checkbox-checked-color: var(--hs-deep);
+  --btn-share-hover-color: var(--hs-deep);
+  --highlight-bg-color: #f1f6f9;
+}
+
+@mixin hanulso-dark {
+  --hs-deep: #6fb0d3;
+  --hs-sky: #4f86a3;
+  --hs-sky-soft: rgb(79 134 163 / 16%);
+  --hs-ink: #e3edf4;
+  --hs-gold: #e0b25a;
+  --hs-sky-img: url('/assets/img/theme/sky-2007.jpg');
+  --hs-sky-filter: brightness(0.42) saturate(0.85) contrast(1.1);
+  --hs-sky-veil: linear-gradient(rgb(15 24 32 / 58%), rgb(15 24 32 / 58%));
+  --hs-active: #245a78;
+
+  --main-bg: #0f1820;
+  --heading-color: #e3edf4;
+  --link-color: #8cc4e4;
+  --link-underline-color: #2f5670;
+  --sidebar-bg: linear-gradient(180deg, #0b2033 0%, #0e1a26 45%, #0f1820 100%);
+  --sidebar-border-color: #1c2d3b;
+  --sidebar-muted-color: #9db6c6;
+  --sidebar-active-color: #ffffff;
+  --sidebar-hover-bg: rgb(111 176 211 / 16%);
+  --sidebar-btn-bg: #142433;
+  --sidebar-btn-color: #8fb1c5;
+  --site-title-color: #eaf3f9;
+  --site-subtitle-color: #9db6c6;
+  --avatar-border-color: #1e3a52;
+  --topbar-bg: rgb(15 24 32 / 72%);
+  --btn-paginator-hover-color: #1a2b39;
+  --toc-highlight: var(--hs-deep);
+  --card-bg: #15212c;
+  --card-hover-bg: #1c2c3a;
+  --tag-border: #2a4558;
+  --tag-hover: #1f3444;
+  --blockquote-border-color: var(--hs-sky);
+  --checkbox-checked-color: var(--hs-deep);
+  --btn-share-hover-color: var(--hs-deep);
+  --highlight-bg-color: #13202b;
+}
+
+:root[data-mode='light'] {
+  @include hanulso-light;
+}
+
+:root[data-mode='dark'] {
+  @include hanulso-dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-mode]) {
+    @include hanulso-light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mode]) {
+    @include hanulso-dark;
+  }
+}
+
+/* 글꼴 */
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+h1, h2, h3, h4, h5,
+.card-title,
+#sidebar .site-title {
+  font-family: 'Gowun Batang', 'AppleMyungjo', 'Noto Serif KR', serif;
+  letter-spacing: -0.2px;
+}
+
+/* 사이드바: 윗부분에 2007년 배너의 구름 하늘을 깔고 아래로 옅어지게 */
+#sidebar {
+  border-right: 1px solid var(--sidebar-border-color);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 17rem;
+    background: var(--hs-sky-img) center top / cover no-repeat;
+    filter: var(--hs-sky-filter);
+    -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 45%, transparent 100%);
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+  }
+
+  #avatar {
+    box-shadow: 0 0 0 4px var(--avatar-border-color), 0 6px 18px rgb(29 59 79 / 18%);
+  }
+
+  .site-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .site-subtitle {
+    font-style: normal !important; /* 테마가 fst-italic(!important)을 붙인다 */
+    height: auto;
+    margin-bottom: 1.75rem;
+
+    /* 옛 배너의 표어: 하늘(꿈·희망) + 소(끈기·노력) */
+    &::after {
+      content: '꿈 · 희망 · 끈기 · 노력';
+      display: block;
+      margin-top: 0.5rem;
+      font-family: 'Nanum Brush Script', cursive;
+      font-size: 1.55rem;
+      line-height: 1.1;
+      letter-spacing: 0;
+      white-space: nowrap;
+      color: var(--hs-deep);
+    }
+  }
+
+  ul li.nav-item {
+    a.nav-link:hover {
+      color: var(--hs-ink);
+    }
+
+    &.active .nav-link {
+      background: var(--hs-active);
+      box-shadow: inset 0 -3px 0 rgb(0 0 0 / 12%);
+    }
+  }
+}
+
+/* 글 제목: 옛 메뉴 머리처럼 하늘색 선을 두른다 */
+.content {
+  h2 {
+    padding-bottom: 0.35rem;
+    border-bottom: 3px solid var(--hs-sky);
+    box-shadow: 0 1px 0 var(--hs-deep);
+  }
+
+  h3 {
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--hs-deep);
+  }
+
+  blockquote {
+    background: var(--hs-sky-soft);
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* 홈 글 목록 카드: 왼쪽 하늘색 띠, 고정 글 핀은 금빛 */
+/* 글 카드는 article.card-wrapper.card 한 요소다. 테마의 #post-list .card { border: 0 } 보다 구체적으로 쓴다 */
+#post-list .card-wrapper.card {
+  border-left: 4px solid var(--hs-sky);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-left-color: var(--hs-deep);
+  }
+}
+
+/* 좁은 화면에는 사이드바가 숨으므로 윗줄에 구름 하늘을 깐다 */
+@media (max-width: 849.98px) {
+  #topbar-wrapper {
+    background-image: var(--hs-sky-veil), var(--hs-sky-img);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--hs-sky);
+  }
+
+  #topbar-title {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    color: var(--hs-ink);
+  }
+}
+
+#post-list .post-meta .fa-thumbtack {
+  color: var(--hs-gold);
+}
+
+.post-tag:hover,
+.post-tags .post-tag:hover {
+  border-color: var(--hs-deep);
+}
