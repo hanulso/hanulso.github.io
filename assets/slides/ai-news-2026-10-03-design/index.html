@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10월 첫째 주 AI 소식</title>
+<style>
+:root{
+  --navy-900:#07122a;
+  --navy-800:#0b1a38;
+  --navy-700:#112650;
+  --navy-600:#1a3366;
+  --line:#2a4378;
+  --gold:#e6b545;
+  --gold-soft:#f3d27e;
+  --gold-dim:rgba(230,181,69,.18);
+  --ink:#eef2fb;
+  --ink-2:#b9c4dc;
+  --ink-3:#7f8fb3;
+  --font:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#03091a;color:var(--ink);font-family:var(--font);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{overflow:hidden;word-break:keep-all;overflow-wrap:normal;line-break:strict}
+h1,h2,h3,p,li,div,span{word-break:keep-all}
+
+/* ---------- 무대: 1280x720 고정, 창에 맞춰 확대·축소 ---------- */
+#viewport{position:fixed;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center}
+#stage{position:relative;width:1280px;height:720px;flex:none;transform-origin:center center;overflow:hidden;
+  background:var(--navy-800)}
+.slide{position:absolute;inset:0;width:1280px;height:720px;padding:64px 80px 56px;
+  background:
+    radial-gradient(1200px 600px at 100% 0%, rgba(230,181,69,.07), transparent 60%),
+    linear-gradient(160deg,var(--navy-800) 0%,var(--navy-900) 100%);
+  opacity:0;visibility:hidden;transition:opacity .35s ease;display:flex;flex-direction:column}
+.slide.active{opacity:1;visibility:visible}
+.slide::before{content:"";position:absolute;left:80px;top:0;width:96px;height:6px;background:var(--gold)}
+
+.kicker{font-size:20px;font-weight:700;letter-spacing:.08em;color:var(--gold);margin-bottom:14px}
+.slide h2{font-size:50px;line-height:1.22;font-weight:800;letter-spacing:-.02em;text-wrap:balance;max-width:1100px}
+.slide h2 em{font-style:normal;color:var(--gold)}
+.body{flex:1;display:flex;gap:48px;margin-top:28px;margin-bottom:40px;min-height:0;align-items:center}
+.body.col{justify-content:center;align-items:stretch}
+.foot{position:absolute;left:80px;right:80px;bottom:26px;display:flex;justify-content:space-between;
+  font-size:15px;color:var(--ink-3)}
+.foot .pg{color:var(--gold);font-weight:700;letter-spacing:.05em}
+
+ul.pts{list-style:none;display:flex;flex-direction:column;gap:18px}
+ul.pts li{position:relative;padding-left:26px;font-size:24px;line-height:1.45;color:var(--ink-2)}
+ul.pts li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;background:var(--gold);transform:rotate(45deg)}
+ul.pts li b{color:var(--ink);font-weight:700}
+
+/* ---------- 1. 표지 ---------- */
+.cover{flex-direction:row;align-items:center;padding:0 80px}
+.cover .left{flex:1}
+.cover .brand{font-size:22px;font-weight:700;color:var(--gold);letter-spacing:.12em;margin-bottom:28px}
+.cover h1{font-size:84px;line-height:1.12;font-weight:800;letter-spacing:-.03em}
+.cover h1 em{font-style:normal;color:var(--gold)}
+.cover .range{display:flex;align-items:center;gap:20px;margin-top:40px}
+.cover .range .d{font-size:44px;font-weight:800;color:var(--ink)}
+.cover .range .arrow{flex:none;width:120px;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));position:relative}
+.cover .range .arrow::after{content:"";position:absolute;right:-4px;top:-8px;border-left:16px solid var(--gold-soft);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.cover .sub{margin-top:22px;font-size:24px;color:var(--ink-2)}
+.cover .mascot{flex:none;width:470px;height:470px;display:flex;align-items:center;justify-content:center;position:relative}
+.cover .mascot::before{content:"";position:absolute;inset:30px;border-radius:50%;
+  background:radial-gradient(circle,rgba(230,181,69,.28),rgba(230,181,69,0) 68%)}
+.cover .mascot img{position:relative;max-width:100%;max-height:100%;object-fit:contain}
+
+/* ---------- 2. 타임라인 ---------- */
+.tl{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin:auto 0;padding-bottom:20px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:56px;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--gold-dim))}
+.tl .day{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.tl .date{font-size:40px;font-weight:800;color:var(--gold);line-height:1}
+.tl .dot{width:22px;height:22px;border-radius:50%;background:var(--navy-800);border:4px solid var(--gold);margin:26px 0 24px}
+.tl .ev{background:var(--navy-700);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;width:100%}
+.tl .ev .who{font-size:15px;color:var(--ink-3);font-weight:700;letter-spacing:.04em}
+.tl .ev .what{font-size:22px;font-weight:700;line-height:1.35;margin-top:4px}
+.tl .ev.hot{border-color:var(--gold);background:linear-gradient(180deg,rgba(230,181,69,.14),rgba(230,181,69,.04))}
+.note-line{font-size:16px;color:var(--ink-3);margin-top:8px}
+
+/* ---------- 3. Mods 흐름도 ---------- */
+.flow{display:flex;align-items:center;gap:0;margin-top:8px}
+.flow .box{flex:none;width:270px;height:170px;border-radius:16px;background:var(--navy-700);border:1px solid var(--line);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:12px}
+.flow .box .big{font-size:34px;font-weight:800;color:var(--gold)}
+.flow .box .sm{font-size:19px;color:var(--ink-2);margin-top:8px;line-height:1.35}
+.flow .box.core{border-color:var(--gold);box-shadow:0 0 0 6px var(--gold-dim)}
+.flow .box.core .big{color:var(--ink)}
+.flow .arr{flex:1;min-width:40px;height:3px;background:var(--gold);position:relative}
+.flow .arr::after{content:"";position:absolute;right:-2px;top:-7px;border-left:13px solid var(--gold);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.warn{margin-top:48px;display:flex;align-items:center;gap:22px;padding:20px 26px;border-radius:14px;
+  border:2px dashed rgba(230,181,69,.6);background:rgba(230,181,69,.06)}
+.warn .tag{flex:none;font-size:22px;font-weight:800;color:var(--navy-900);background:var(--gold);padding:8px 16px;border-radius:8px}
+.warn .txt{font-size:23px;color:var(--ink);line-height:1.4}
+.col{display:flex;flex-direction:column}
+
+/* ---------- 4. 가격 비교 ---------- */
+.price{flex:none;width:640px;display:flex;flex-direction:column;gap:22px}
+.prow{display:grid;grid-template-columns:190px 1fr;align-items:center;gap:18px}
+.prow .lab{font-size:21px;font-weight:700;line-height:1.3}
+.prow .lab small{display:block;font-size:15px;color:var(--ink-3);font-weight:500}
+.bars{display:flex;flex-direction:column;gap:8px}
+.brow{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:800;white-space:nowrap}
+.bar{height:40px;border-radius:6px;flex:none}
+.bar.out{background:var(--gold)}
+.bar.in{background:#4f6aa3}
+.bar.later{background:transparent;border:2px dashed var(--gold)}
+.bar.later.in{border-color:#8ea2cc}
+.brow .v{color:var(--ink)}
+.brow .v.o{color:var(--gold)}
+.legend{display:flex;gap:26px;font-size:16px;color:var(--ink-3);margin-left:208px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:8px}
+
+/* ---------- 큰 숫자 ---------- */
+.stats{display:flex;gap:28px}
+.stat{flex:1;background:var(--navy-700);border:1px solid var(--line);border-radius:18px;padding:26px 28px}
+.stat .n{font-size:84px;font-weight:800;line-height:1;color:var(--gold);letter-spacing:-.03em}
+.stat .n small{font-size:36px;font-weight:800;margin-left:4px}
+.stat .l{font-size:22px;color:var(--ink-2);margin-top:14px;line-height:1.35}
+.steps{display:flex;align-items:stretch;gap:0;margin-top:36px}
+.step{flex:1;padding:18px 22px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;position:relative}
+.step .k{font-size:15px;color:var(--gold);font-weight:800;letter-spacing:.08em}
+.step .t{font-size:22px;font-weight:700;margin-top:6px;line-height:1.35}
+.chev{flex:none;width:36px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:28px;font-weight:800}
+
+/* ---------- 점 그리드 ---------- */
+.grid-wrap{flex:none;display:flex;flex-direction:column;gap:14px}
+.dots{display:grid;gap:12px}
+.dots span{width:40px;height:40px;border-radius:50%;border:3px solid var(--ink-3)}
+.dots span.g{background:var(--gold);border-color:var(--gold)}
+.dots span.s{background:var(--navy-600);border-color:#5d77ad}
+.dots.sm{gap:9px}
+.dots.sm span{width:30px;height:30px;border-width:2px;border-color:#33507f}
+.dots.sm span.g{border-color:var(--gold)}
+.gl{display:flex;gap:24px;font-size:17px;color:var(--ink-2)}
+.gl i{display:inline-block;width:16px;height:16px;border-radius:50%;vertical-align:-2px;margin-right:8px}
+.bignum{font-size:120px;font-weight:800;line-height:1;color:var(--gold);letter-spacing:-.04em}
+.bignum .slash{color:var(--ink-3);font-weight:300;margin:0 8px}
+.bignum .of{color:var(--ink)}
+.caption{font-size:22px;color:var(--ink-2);margin-top:10px}
+
+/* ---------- 발표자 노트 (화면 안 패널) ---------- */
+.notes{display:none}
+#notesPanel{position:fixed;left:0;right:0;bottom:0;height:0;overflow:auto;background:#0d1730;border-top:0 solid var(--gold);
+  color:var(--ink);font-size:18px;line-height:1.65;padding:0 32px;transition:height .2s}
+body.show-notes #notesPanel{height:30vh;padding:18px 32px;border-top-width:2px}
+#notesPanel h4{font-size:14px;color:var(--gold);letter-spacing:.1em;margin-bottom:8px}
+#notesPanel p{margin-bottom:8px;max-width:1100px}
+#help{position:fixed;right:16px;bottom:14px;font-size:13px;color:var(--ink-3);background:rgba(7,18,42,.85);
+  border:1px solid var(--line);border-radius:8px;padding:8px 12px;opacity:0;transition:opacity .3s;pointer-events:none}
+body.show-help #help{opacity:1}
+
+/* ---------- 인쇄: 한 장에 한 쪽 ---------- */
+@page{size:1280px 720px;margin:0}
+@media print{
+  html,body{height:auto;overflow:visible;background:var(--navy-800)}
+  #viewport{position:static;display:block}
+  #stage{transform:none!important;width:1280px;height:auto;overflow:visible;background:none}
+  .slide{position:relative;inset:auto;opacity:1;visibility:visible;transition:none;
+    break-after:page;page-break-after:always;break-inside:avoid;overflow:hidden}
+  .slide:last-child{break-after:auto;page-break-after:auto}
+  #notesPanel,#help{display:none!important}
+}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+
+<!-- 1. 표지 -->
+<section class="slide cover" data-title="표지">
+  <div class="left">
+    <div class="brand">하늘소 AI 소식</div>
+    <h1>10월 첫째 주<br><em>AI 소식</em></h1>
+    <div class="range"><span class="d">9.27</span><span class="arrow"></span><span class="d">10.3</span></div>
+    <p class="sub">한 주 동안 나온 소식 가운데 여섯 가지</p>
+  </div>
+  <div class="mascot"><img src="mascot.png" alt="하늘소 AI 마스코트"></div>
+  <div class="foot"><span>hanulso.github.io/posts/ai-news-2026-10-03</span><span class="pg">01 / 07</span></div>
+  <aside class="notes">
+    <p>9월 27일부터 10월 3일까지 한 주 동안 나온 AI 소식을 정리했습니다. 원문은 하늘소 블로그 「10월 첫째 주 AI 소식 모음」입니다.</p>
+    <p>날짜는 한국 시각으로 적고, 해외 발표 중 시각이 없는 것은 현지 날짜로 적었습니다. 9월 29일에 따로 정리한 Claude Sonnet 5.5는 이번에 뺐습니다.</p>
+    <p>오늘은 코딩 도구 흐름, Claude Code Mods, 새 모델 가격, Anthropic의 엔지니어 양성 계획, AI중심대학, 스킬 가이드북 순서로 봅니다.</p>
+  </aside>
+</section>
+
+<!-- 2. 타임라인 -->
+<section class="slide" data-title="코딩 도구 타임라인">
+  <div class="kicker">코딩 도구</div>
+  <h2>닷새 동안 <em>하루도 빠짐없이</em> 코딩 도구 소식이 나왔다</h2>
+  <div class="tl">
+    <div class="day"><div class="date">9.29</div><div class="dot"></div>
+      <div class="ev hot"><div class="who">OPENAI DEVDAY</div><div class="what">GPT-6.1 Sol</div></div>
+      <div class="ev"><div class="who">OPENAI</div><div class="what">늘 켜져 있는 에이전트 dots</div></div></div>
+    <div class="day"><div class="date">9.30</div><div class="dot"></div>
+      <div class="ev hot"><div class="who">GOOGLE</div><div class="what">Gemini 4 Argon 발표</div></div>
+      <div class="ev"><div class="who">GITHUB COPILOT</div><div class="what">HydraFusion</div></div></div>
+    <div class="day"><div class="date">10.1</div><div class="dot"></div>
+      <div class="ev hot"><div class="who">ANTHROPIC</div><div class="what">Claude Code Mods</div></div>
+      <div class="ev"><div class="who">GITHUB COPILOT</div><div class="what">컴퓨터 사용</div></div></div>
+    <div class="day"><div class="date">10.2</div><div class="dot"></div>
+      <div class="ev"><div class="who">GITHUB COPILOT</div><div class="what">Opus 4.7 등 지원 종료</div></div></div>
+    <div class="day"><div class="date">10.3</div><div class="dot"></div>
+      <div class="ev"><div class="who">CLAUDE CODE</div><div class="what">v2.1.288 지운 프롬프트 되살리기</div></div></div>
+  </div>
+    <div class="foot"><span>해외 발표는 현지 날짜 기준 · 출처: OpenAI · Google · GitHub · Anthropic 발표</span><span class="pg">02 / 07</span></div>
+  <aside class="notes">
+    <p>한 주의 흐름부터 보겠습니다. 9월 29일(미국) OpenAI DevDay에서 GPT-6.1 Sol이 나왔습니다. 9월 22일에 나온 GPT-6 Sol의 후속입니다. 같은 날 GitHub Copilot에서도 정식 제공을 시작했고, 늘 켜져 있는 개인 에이전트 dots도 함께 나왔습니다.</p>
+    <p>9월 30일(미국)에는 Google이 Gemini 4 Argon을 발표했습니다. 같은 날 GitHub Copilot에 HydraFusion이 리서치 프리뷰로 들어왔습니다. 여러 모델을 Single, Cascade, Critique 세 방식 중 하나로 섞어 쓰는 기능입니다.</p>
+    <p>10월 1일(미국) Anthropic이 Claude Code Mods를 내놓았고, Copilot CLI와 앱은 데스크톱 앱을 직접 조작하는 컴퓨터 사용을 공개 프리뷰로 열었습니다. CLI에서는 /computer on으로 켭니다.</p>
+    <p>10월 2일 Copilot은 Claude Opus 4.7을 Opus 5.5로, Gemini 3.5·3.6 Flash를 3.8 Flash로, Kimi K2.7 Code를 K3로 바꾸라고 안내했습니다. 10월 3일 Claude Code v2.1.288은 Ctrl+C로 지운 프롬프트를 ↑로 되살리는 기능과, 권한 확인 없이 도는 설정에서 bash -c 안의 위험한 rm이 실행되던 문제 수정이 들어갔습니다.</p>
+  </aside>
+</section>
+
+<!-- 3. Mods -->
+<section class="slide" data-title="Claude Code Mods">
+  <div class="kicker">ANTHROPIC · 10월 1일(미국)</div>
+  <h2>몇 줄짜리 TypeScript로 <em>Claude Code를 바꾼다</em></h2>
+  <div class="body col">
+    <div class="flow">
+      <div class="box"><div class="big">TypeScript</div><div class="sm">몇 줄짜리 mod</div></div>
+      <div class="arr"></div>
+      <div class="box core"><div class="big">Claude Code</div><div class="sm">동작과 화면이 바뀐다<br>CLI · 데스크톱 앱</div></div>
+      <div class="arr"></div>
+      <div class="box"><div class="big">플러그인</div><div class="sm">담아서 나눈다</div></div>
+    </div>
+    <div class="warn"><span class="tag">샌드박스 없음</span>
+      <span class="txt">mod는 Claude Code와 <b>같은 권한</b>으로 내 컴퓨터에서 돈다. 믿을 수 있는 곳의 mod만 깔자.</span></div>
+  </div>
+  <div class="foot"><span>출처: Claude 블로그 「Customize Claude Code with mods in TypeScript」</span><span class="pg">03 / 07</span></div>
+  <aside class="notes">
+    <p>Anthropic이 10월 1일(미국) Claude Code에 Mods를 내놓았습니다. 몇 줄짜리 TypeScript로 Claude Code의 동작과 화면을 바꾸는 확장입니다. 플러그인에 담아 나눌 수 있고, CLI와 데스크톱 앱에서 동작합니다.</p>
+    <p>Claude Code의 기본 기능 일부도 이제 mod입니다. 예를 들어 /diff는 끄거나 내가 만든 것으로 바꿀 수 있습니다.</p>
+    <p>주의할 점은 샌드박스가 없다는 것입니다. mod는 Claude Code와 같은 권한으로 내 컴퓨터에서 돌아가니, 믿을 수 있는 곳의 mod만 깔라고 안내합니다. Team·Enterprise 요금제와 관리 설정이 있는 컴퓨터에서는 sec-default라는 기본 mod가 먼저 실행돼, 사용자가 깐 mod의 위험한 동작을 막습니다.</p>
+    <p>같은 주에 원격 사용 관련 수정도 여럿 들어갔습니다. v2.1.285(9월 30일)에서 claude --desktop으로 지금 폴더를 데스크톱 앱에서 열 수 있게 됐고, v2.1.287~288(10월 2~3일)에서 Remote Control이 몇 분씩 메시지를 못 받던 문제와 Mac이 잠자기에 들어가면 세션이 멈추던 문제를 고쳤습니다.</p>
+  </aside>
+</section>
+
+<!-- 4. 가격 -->
+<section class="slide" data-title="새 모델 가격">
+  <div class="kicker">새 모델 · 100만 토큰당 가격</div>
+  <h2>새 모델 둘, 출발 가격은 똑같이 <em>$2 / $10</em></h2>
+  <div class="body">
+    <div class="price">
+      <div class="prow"><div class="lab">GPT-6.1 Sol<small>OpenAI · 9월 29일</small></div>
+        <div class="bars"><div class="brow"><div class="bar in" style="width:42px"></div><span class="v">$2</span></div><div class="brow"><div class="bar out" style="width:210px"></div><span class="v o">$10</span></div></div></div>
+      <div class="prow"><div class="lab">Gemini 4 Argon<small>도입가</small></div>
+        <div class="bars"><div class="brow"><div class="bar in" style="width:42px"></div><span class="v">$2</span></div><div class="brow"><div class="bar out" style="width:210px"></div><span class="v o">$10</span></div></div></div>
+      <div class="prow"><div class="lab">Gemini 4 Argon<small>도입 기간 뒤</small></div>
+        <div class="bars"><div class="brow"><div class="bar in later" style="width:84px"></div><span class="v">$4</span></div><div class="brow"><div class="bar out later" style="width:420px"></div><span class="v o">$20</span></div></div></div>
+      <div class="legend"><span><i style="background:#4f6aa3"></i>입력</span><span><i style="background:var(--gold)"></i>출력</span><span>점선: 도입 기간 뒤</span></div>
+    </div>
+    <ul class="pts" style="flex:1;margin-top:6px">
+      <li><b>Sol</b>은 Codex·ChatGPT Work·GitHub Copilot에서 바로 쓴다</li>
+      <li><b>Argon</b>은 아직 일반 사용자에게 안 풀렸다</li>
+    </ul>
+  </div>
+  <div class="foot"><span>Sol 가격은 입력 272K 토큰 이하 기준 · 출처: OpenAI 변경 이력, Google 블로그</span><span class="pg">04 / 07</span></div>
+  <aside class="notes">
+    <p>이번 주에 나온 두 모델의 가격을 나란히 놓으면 출발점이 같습니다.</p>
+    <p>GPT-6.1 Sol의 API 가격은 입력 272K 토큰 이하 기준으로 100만 토큰당 입력 $2, 캐시 입력 $0.10, 캐시 쓰기 $2.50, 출력 $10입니다. OpenAI 변경 이력에는 「GPT-6 Astra보다 낮은 비용으로 복잡한 코딩과 전문 업무를 하는 모델」이라고 적혀 있습니다. 서브에이전트에 일을 나눠 맡기는 멀티 에이전트 기능이 베타로 들어갔고, GitHub Copilot에서는 Pro+·Max·Business·Enterprise에서 정식 제공을 시작했습니다.</p>
+    <p>Gemini 4 Argon은 도입가가 100만 토큰당 입력 $2, 출력 $10이고, 도입 기간이 끝나면 $4, $20이 됩니다. 다만 지금은 사이버 방어 담당자를 위한 Fairwind 프로그램에만 풀었고, 다음 차례인 유료 API 고객과 Google AI Ultra 구독자에게 언제 풀지는 밝히지 않았습니다. 출력 한도는 64K에서 1M 토큰으로 늘렸고, Google은 DeepSWE v1.1에서 77.9%로 최고 기록을 세웠다고 밝혔습니다. 이 성능 수치는 회사가 밝힌 것이고 독립적으로 재현한 결과가 아닙니다.</p>
+    <p>덧붙여, GPT-6.1 Astra는 출시가 취소됐다는 보도가 있었습니다. Engadget이 월스트리트저널을 인용해 전한 것이고 OpenAI 발표는 아닙니다.</p>
+  </aside>
+</section>
+
+<!-- 5. Frontier Academy -->
+<section class="slide" data-title="Claude Frontier Academy">
+  <div class="kicker">ANTHROPIC · 10월 2일(미국)</div>
+  <h2>1억 달러로 <em>엔지니어 1만 명</em>을 키운다</h2>
+  <div class="body col">
+    <div class="stats">
+      <div class="stat"><div class="n">1<small>억 달러</small></div><div class="l">Claude Frontier Academy에<br>들이는 돈</div></div>
+      <div class="stat"><div class="n">1<small>만 명</small></div><div class="l">2027년 말까지 키울<br>Frontier Deployed Engineer</div></div>
+      <div class="stat"><div class="n">12<small>주</small></div><div class="l">자기 회사에서 실제 프로젝트를 이끄는 레지던시</div></div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="k">1단계</div><div class="t">대면 교육 · 실기 시험</div></div>
+      <div class="chev">›</div>
+      <div class="step"><div class="k">2단계</div><div class="t">Claude Resident Engineer 배지</div></div>
+      <div class="chev">›</div>
+      <div class="step"><div class="k">3단계</div><div class="t">12주 레지던시</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>출처: Anthropic 「Claude Frontier Academy」</span><span class="pg">05 / 07</span></div>
+  <aside class="notes">
+    <p>Anthropic은 10월 2일(미국) Claude Frontier Academy를 열었습니다. 1억 달러를 들여 2027년 말까지 「Frontier Deployed Engineer」 1만 명을 키운다는 계획입니다. AI를 실제 업무 시스템에 넣는 일을 맡는 엔지니어입니다.</p>
+    <p>대면 교육과 실기 시험을 통과하면 Claude Resident Engineer 배지를 받고, 12주 동안 자기 회사에서 실제 Claude 프로젝트를 이끄는 레지던시로 넘어갑니다.</p>
+    <p>첫 기수는 Accenture, Bain, Capgemini, Deloitte, McKinsey, Morgan Stanley 등의 엔지니어입니다. 샌프란시스코·뉴욕·런던에서 진행하고, 회사 추천으로만 참여합니다. 학생이 바로 지원할 수 있는 프로그램은 아니지만, 「AI를 업무에 넣는 엔지니어」라는 직무가 따로 생기고 있다는 신호로 볼 만합니다.</p>
+  </aside>
+</section>
+
+<!-- 6. AI중심대학 -->
+<section class="slide" data-title="AI중심대학·AX대학원">
+  <div class="kicker">과기정통부 · 9월 29일</div>
+  <h2>SW중심대학이 <em>AI중심대학</em>으로 바뀐다</h2>
+  <div class="body">
+    <div class="grid-wrap">
+      <div class="bignum">18<span class="slash">+</span><span class="of">15</span></div>
+      <div class="caption">AI중심대학 18곳 · AX대학원 15곳 출범</div>
+      <div class="dots" style="grid-template-columns:repeat(9,40px);margin-top:18px">
+        <span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span>
+        <span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="s"></span><span class="g"></span><span class="g"></span><span class="g"></span>
+      </div>
+      <div class="gl"><span><i style="background:var(--navy-600);border:2px solid #5d77ad"></i>SW중심대학에서 전환 15곳</span><span><i style="background:var(--gold)"></i>신규 3곳</span></div>
+    </div>
+    <ul class="pts" style="flex:1;margin-top:12px">
+      <li>대학마다 <b>해마다 30억 원</b>, 최장 8년</li>
+      <li>전교생 <b>AI 기초교육</b>이 의무가 된다</li>
+      <li>내년에 남은 SW중심대학 <b>38곳</b>도 평가해 전면 전환</li>
+    </ul>
+  </div>
+  <div class="foot"><span>출처: 대한민국 정책브리핑 「AI중심대학 18곳·AX대학원 15곳 출범」</span><span class="pg">06 / 07</span></div>
+  <aside class="notes">
+    <p>과기정통부는 9월 29일 AI중심대학 18곳과 AX대학원 15곳을 출범시켰습니다. 대학 SW 교육의 틀이 바뀌는 소식이라 우리 동아리와도 가깝습니다.</p>
+    <p>AI중심대학은 신규 3곳과 SW중심대학에서 전환한 15곳입니다. 대학마다 최장 8년 동안 해마다 30억 원을 지원합니다. 참여 대학은 전교생 AI 기초교육을 의무로 하고, 전공과 AI를 잇는 융합 교과목을 새로 엽니다. 내년에는 아직 전환하지 않은 SW중심대학 38곳을 평가해 AI중심대학으로 전면 전환할 계획입니다.</p>
+    <p>비수도권 대학은 AI중심대학 18곳 중 11곳, AX대학원 15곳 중 8곳입니다. 내년 이후 새로 뽑을 때는 비수도권 비율을 70% 이상으로 늘립니다.</p>
+    <p>경북대가 18곳에 들어 있는지는 이 기사로는 확인하지 못했습니다. 질문이 나오면 그렇게 답하면 됩니다.</p>
+  </aside>
+</section>
+
+<!-- 7. 스킬 가이드북 -->
+<section class="slide" data-title="스킬 가이드북">
+  <div class="kicker">써 볼 만한 것 · 클로드 코덱스 스킬 가이드북</div>
+  <h2>스킬은 만드는 것보다 <em>고르는 게</em> 어렵다</h2>
+  <div class="body">
+    <div class="grid-wrap">
+      <div class="dots sm" style="grid-template-columns:repeat(14,30px)" id="skillDots"></div>
+      <div class="gl"><span><i style="background:var(--gold)"></i>110일 동안 한 번이라도 쓴 스킬</span><span><i style="border:2px solid #33507f"></i>안 쓴 스킬</span></div>
+    </div>
+    <div class="col" style="flex:1">
+      <div class="bignum">27<span class="slash">/</span><span class="of">82</span></div>
+      <div class="caption">저자가 만든 스킬 82개 중 실제로 쓴 것</div>
+      <ul class="pts" style="margin-top:34px">
+        <li>책에는 8개 분야, 스킬 <b>56개</b>만 골라 담았다</li>
+        <li>위키독스에 <b>무료</b> 공개</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>출처: 긱뉴스 「클로드 코덱스 스킬 가이드북」 (10월 1일)</span><span class="pg">07 / 07</span></div>
+  <aside class="notes">
+    <p>마지막은 써 볼 만한 것입니다. 국내 개발자가 Claude Code와 Codex의 에이전트 스킬을 골라 한국어로 정리한 책을 위키독스에 무료로 공개했습니다. 긱뉴스 10월 1일 글입니다. 공개 첫 주 위키독스 주간베스트 3위(주간 조회 12,738회)에 올랐습니다.</p>
+    <p>8개 분야, 스킬 56개를 담았고, 최근 90일 안에 관리되고 MIT·Apache-2.0 라이선스인 것만 골랐습니다.</p>
+    <p>인상적인 숫자는 저자 자신의 경험입니다. 스킬을 82개 만들었는데 110일 동안 한 번이라도 쓴 것은 27개였다고 합니다. 스킬을 많이 만드는 것보다 고르는 게 어렵다는 이야기입니다.</p>
+    <p>원문에는 이 밖에도 AWS 서울 리전의 Claude, 독파모, 업스테이지 솔라 미니 4, herdr web ui 소식이 있습니다. 블로그 글에서 출처와 함께 볼 수 있습니다.</p>
+  </aside>
+</section>
+
+</div></div>
+
+<div id="notesPanel"><h4 id="npTitle">발표자 노트</h4><div id="npBody"></div></div>
+<div id="help">← → 이동 · F 전체 화면 · N 노트 패널 · P 발표자 창 · H 도움말</div>
+
+<script>
+(function(){
+  // 7장: 82개 점 중 27개 강조
+  var sd=document.getElementById('skillDots'), h='';
+  for(var i=0;i<82;i++) h+='<span'+(i<27?' class="g"':'')+'></span>';
+  sd.innerHTML=h;
+
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var stage=document.getElementById('stage');
+  var cur=0, presenter=null, t0=Date.now();
+
+  function fromHash(){var n=parseInt((location.hash||'').replace('#',''),10);return (n>=1&&n<=slides.length)?n-1:0}
+  function fit(){
+    var panel=document.body.classList.contains('show-notes')?window.innerHeight*0.3:0;
+    var w=window.innerWidth, hgt=window.innerHeight-panel;
+    var s=Math.min(w/1280,hgt/720);
+    stage.style.transform='scale('+s+')';
+    document.getElementById('viewport').style.bottom=panel+'px';
+  }
+  function notesOf(i){var n=slides[i].querySelector('.notes');return n?n.innerHTML:''}
+  function titleOf(i){var h=slides[i].querySelector('h2,h1');return h?h.textContent.replace(/\s+/g,' ').trim():''}
+  function show(i){
+    cur=Math.max(0,Math.min(slides.length-1,i));
+    slides.forEach(function(s,k){s.classList.toggle('active',k===cur)});
+    if(location.hash!=='#'+(cur+1)) history.replaceState(null,'','#'+(cur+1));
+    document.getElementById('npTitle').textContent='발표자 노트 · '+(cur+1)+' / '+slides.length;
+    document.getElementById('npBody').innerHTML=notesOf(cur);
+    renderPresenter();
+  }
+  function renderPresenter(){
+    if(!presenter||presenter.closed) return;
+    var d=presenter.document;
+    d.getElementById('pos').textContent=(cur+1)+' / '+slides.length;
+    d.getElementById('ttl').textContent=titleOf(cur);
+    d.getElementById('nts').innerHTML=notesOf(cur);
+    d.getElementById('nxt').textContent=cur+1<slides.length?('다음: '+titleOf(cur+1)):'마지막 장';
+  }
+  function openPresenter(){
+    presenter=window.open('','hanulso-notes','width=760,height=640');
+    if(!presenter){document.body.classList.add('show-notes');fit();return}
+    var d=presenter.document;
+    d.open();
+    d.write('<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>발표자 노트</title><style>'+
+      'body{margin:0;padding:28px 32px;background:#0b1a38;color:#eef2fb;font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif;word-break:keep-all}'+
+      '#top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #e6b545;padding-bottom:12px}'+
+      '#pos{color:#e6b545;font-weight:800;font-size:22px}#clk{color:#7f8fb3;font-size:18px}'+
+      '#ttl{font-size:26px;font-weight:800;margin:18px 0 12px;line-height:1.3}'+
+      '#nts{font-size:20px;line-height:1.7;color:#d5ddef}#nts p{margin:0 0 12px}'+
+      '#nxt{margin-top:18px;padding-top:12px;border-top:1px solid #2a4378;color:#7f8fb3;font-size:17px}'+
+      '</style></head><body><div id="top"><span id="pos"></span><span id="clk">00:00</span></div>'+
+      '<div id="ttl"></div><div id="nts"></div><div id="nxt"></div></body></html>');
+    d.close();
+    d.addEventListener('keydown',onKey);
+    setInterval(function(){
+      if(!presenter||presenter.closed) return;
+      var s=Math.floor((Date.now()-t0)/1000);
+      presenter.document.getElementById('clk').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+    },1000);
+    renderPresenter();
+  }
+  function toggleFull(){
+    if(document.fullscreenElement) document.exitFullscreen();
+    else if(document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+  }
+  function onKey(e){
+    if(e.isComposing||e.metaKey||e.ctrlKey||e.altKey) return;
+    switch(e.code){   // e.code: 한글 입력 상태에서도 같은 키로 판정
+      case 'ArrowRight': case 'PageDown': case 'Space': show(cur+1); break;
+      case 'ArrowLeft': case 'PageUp': show(cur-1); break;
+      case 'Home': show(0); break;
+      case 'End': show(slides.length-1); break;
+      case 'KeyF': toggleFull(); break;
+      case 'KeyN': document.body.classList.toggle('show-notes'); fit(); break;
+      case 'KeyP': openPresenter(); break;
+      case 'KeyH': document.body.classList.toggle('show-help'); break;
+      default: return;
+    }
+    e.preventDefault();
+  }
+  document.addEventListener('keydown',onKey);
+  window.addEventListener('resize',fit);
+  window.addEventListener('hashchange',function(){show(fromHash())});
+  document.addEventListener('click',function(e){ if(e.target.closest('#notesPanel'))return; show(cur+(e.clientX<window.innerWidth/3?-1:1)) });
+  fit(); show(fromHash());
+  // 처음 열면 단축키 안내를 잠깐 보여 준다
+  document.body.classList.add('show-help'); setTimeout(function(){document.body.classList.remove('show-help')},3500);
+  window.__deck={show:show,get cur(){return cur},count:slides.length};
+})();
+</script>
+</body>
+</html>
