@@ -17,6 +17,8 @@ order: 3
 - **하늘** — 그림 프로그램. 화면은 2.3판입니다.
 
   ![하늘 2.3 화면](/assets/img/works/hanul-2.3.gif){: width="240" height="180" .normal }
+
+  [하늘 2.3 내려받기](/assets/files/hanul-2.3.lzh) (MS-DOS용, LZH 압축 270KB). 옛 홈페이지 작품 페이지에서 내려받을 수 있던 배포본입니다. 실행 파일 H.EXE와 글꼴 파일이 들어 있습니다. 도스용 프로그램이라 지금 컴퓨터에서는 DOSBox 같은 도스 에뮬레이터가 필요합니다.
 - **IMPLAY** — 음악 연주기.
 
   ![IMPLAY 화면](/assets/img/works/implay.gif){: width="240" height="180" .normal }
