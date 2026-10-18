@@ -1,0 +1,154 @@
+# 자료 > 옛 책자 (_tabs/materials.md). 쪽 그림은 assets/img/booklets/<id>/NN.jpg
+# 2009년 8월에 찍은 책자 사진을 원근 보정해서 만들었다. 개인 연락처는 가렸다.
+- id: 1997-exhibition
+  year: "1997"
+  short: "하늘소 작품전시회"
+  title: "하늘소 작품전시회 (1997)"
+  desc: "1997년 11월 27~28일 경북대학교 공대 5호관에서 연 제11회 하늘소 작품전시회 책자. 하늘소가 직접 엮었다. 인사말, 동아리 소개, 큰사람 칼럼, 하늘소 강좌, 작품 소개, 회원의 글이 실려 있다."
+  width: 1000
+  height: 1401
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "목차" }
+    - { file: 03.jpg, label: "1쪽" }
+    - { file: 04.jpg, label: "2쪽" }
+    - { file: 05.jpg, label: "3쪽" }
+    - { file: 06.jpg, label: "4쪽" }
+    - { file: 07.jpg, label: "5쪽" }
+    - { file: 08.jpg, label: "6쪽" }
+    - { file: 09.jpg, label: "7쪽" }
+    - { file: 10.jpg, label: "8쪽" }
+    - { file: 11.jpg, label: "9쪽" }
+    - { file: 12.jpg, label: "10쪽" }
+    - { file: 13.jpg, label: "11쪽" }
+    - { file: 14.jpg, label: "12쪽" }
+    - { file: 15.jpg, label: "13쪽" }
+    - { file: 16.jpg, label: "14쪽" }
+    - { file: 17.jpg, label: "15쪽" }
+    - { file: 18.jpg, label: "16쪽" }
+    - { file: 19.jpg, label: "17쪽" }
+    - { file: 20.jpg, label: "18쪽" }
+    - { file: 21.jpg, label: "19쪽" }
+    - { file: 22.jpg, label: "20쪽" }
+    - { file: 23.jpg, label: "21쪽" }
+    - { file: 24.jpg, label: "22쪽" }
+    - { file: 25.jpg, label: "23쪽" }
+    - { file: 26.jpg, label: "24쪽" }
+    - { file: 27.jpg, label: "25쪽" }
+    - { file: 28.jpg, label: "26쪽" }
+    - { file: 29.jpg, label: "27쪽" }
+    - { file: 30.jpg, label: "28쪽" }
+    - { file: 31.jpg, label: "29쪽" }
+    - { file: 32.jpg, label: "30쪽" }
+    - { file: 33.jpg, label: "31쪽" }
+    - { file: 34.jpg, label: "32쪽" }
+    - { file: 35.jpg, label: "33쪽" }
+    - { file: 36.jpg, label: "34쪽" }
+    - { file: 37.jpg, label: "35쪽" }
+    - { file: 38.jpg, label: "36쪽" }
+    - { file: 39.jpg, label: "37쪽" }
+    - { file: 40.jpg, label: "38쪽" }
+    - { file: 41.jpg, label: "39쪽" }
+    - { file: 42.jpg, label: "40쪽" }
+    - { file: 43.jpg, label: "광고" }
+    - { file: 44.jpg, label: "광고" }
+    - { file: 45.jpg, label: "작품 목록(낱장)" }
+- id: 1997-bulsajo
+  year: "1997"
+  short: "불사조 대제전"
+  title: "'97 불사조 대제전"
+  desc: "1997년 9월 24~26일 경북대학교 전자전기공학부 학생회가 연 불사조 대제전 책자의 표지. 하늘소 9기 박준호의 HTML 브라우저가 이 행사 작품전에 나갔다. 사진은 표지만 남아 있다."
+  width: 1000
+  height: 1421
+  pages:
+    - { file: 01.jpg, label: "표지" }
+- id: 2000-seek
+  year: "2000"
+  short: "SEEK SQUARE"
+  title: "SEEK SQUARE 2000"
+  desc: "2000년 11월 21~23일 경북대학교 공과대학 5호관에서 열린 전자전기공학부 학생작품전 책자. 표지 다음에 찍힌 하늘소 쪽(11쪽)에 동아리 소개와 작품 네 개가 실려 있다. 이 쪽에는 연도가 적혀 있지 않다."
+  width: 1000
+  height: 1468
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "11쪽" }
+- id: 2003-seek
+  year: "2003"
+  short: "SEEK SQUARE"
+  title: "SEEK SQUARE 2003"
+  desc: "2003년 11월 19~21일 전자전기컴퓨터학부 학생작품전 책자. 13쪽에 하늘소 동아리 소개, 연혁, 작품이 실려 있다."
+  width: 1000
+  height: 1428
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "13쪽" }
+- id: 2004-seek
+  year: "2004"
+  short: "SEEK SQUARE"
+  title: "SEEK SQUARE 2004"
+  desc: "2004년 11월 19~20일 대구 EXCO에서 열린 전자전기컴퓨터학부 학생작품전 책자. 5쪽이 하늘소 쪽이다."
+  width: 1000
+  height: 1405
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "5쪽" }
+- id: 2004-nuri
+  year: "2004"
+  short: "NURI 엑스포"
+  title: "모바일-디스플레이 NURI 엑스포 2004"
+  desc: "2004년 11월 19~20일 대구 EXCO. 누리학생 작품전시회 공식 디렉터리 가운데 하늘소 작품이 실린 쪽."
+  width: 1000
+  height: 1379
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "10쪽" }
+    - { file: 03.jpg, label: "11쪽" }
+    - { file: 04.jpg, label: "12쪽" }
+    - { file: 05.jpg, label: "13쪽" }
+- id: 2005-nuri
+  year: "2005"
+  short: "NURI 엑스포"
+  title: "모바일-디스플레이 NURI 엑스포 2005"
+  desc: "2005년 12월 1~3일 대구 EXCO. 학생작품전 공식 디렉터리 가운데 하늘소 작품이 실린 29~32쪽."
+  width: 1000
+  height: 1359
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "29쪽" }
+    - { file: 03.jpg, label: "30쪽" }
+    - { file: 04.jpg, label: "31쪽" }
+    - { file: 05.jpg, label: "32쪽" }
+- id: 2006-nuri
+  year: "2006"
+  short: "NURI 엑스포"
+  title: "모바일-디스플레이 NURI 엑스포 2006"
+  desc: "2006년 11월 21~23일 대구 EXCO. 학생작품전 공식 디렉터리 가운데 하늘소 작품이 실린 19~21쪽."
+  width: 1000
+  height: 1402
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "19쪽" }
+    - { file: 03.jpg, label: "20쪽" }
+    - { file: 04.jpg, label: "21쪽" }
+- id: 2007-nuri
+  year: "2007"
+  short: "NURI 엑스포"
+  title: "모바일-디스플레이 NURI 엑스포 2007"
+  desc: "2007년 11월 15~17일 대구 EXCO. 학생작품전 디렉터리 가운데 하늘소 작품이 실린 쪽. 첫 작품 쪽은 아래가 잘려 찍혔다."
+  width: 1000
+  height: 1402
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "작품 쪽" }
+    - { file: 03.jpg, label: "26쪽" }
+- id: 2008-nuri
+  year: "2008"
+  short: "NURI 엑스포"
+  title: "모바일-디스플레이 NURI 엑스포 2008"
+  desc: "2008년 11월 6~7일 대구 EXCO. 학생작품전 디렉터리 가운데 하늘소 작품이 실린 30쪽과 그다음 쪽."
+  width: 1000
+  height: 1406
+  pages:
+    - { file: 01.jpg, label: "표지" }
+    - { file: 02.jpg, label: "30쪽" }
+    - { file: 03.jpg, label: "다음 쪽" }

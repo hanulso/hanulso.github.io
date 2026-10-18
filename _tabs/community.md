@@ -1,7 +1,7 @@
 ---
 title: 커뮤니티
 icon: fas fa-users
-order: 6
+order: 7
 ---
 
 소식은 이 홈페이지에 모으고 이야기는 아래 커뮤니티에서 나눕니다.
