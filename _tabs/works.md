@@ -4,7 +4,7 @@ icon: fas fa-laptop-code
 order: 3
 ---
 
-하늘소 회원들이 대회, 전시회, 동아리 사업으로 만든 작품입니다. 1997년 하늘소 작품전시회 책자, SEEK SQUARE 2000 책자, 2004~2008년 모바일-디스플레이 NURI 엑스포 디렉터리 책자, 2006년 홈페이지의 [하늘소작품](https://web.archive.org/web/20060303234125/http://hanulso.knu.ac.kr/project/project.php) 페이지를 옮기며 설명을 줄였습니다. 참여자는 당시 표기대로 기수와 이름을 적었습니다. 작품 화면은 옛 홈페이지 소스(2011년 무렵 작업 사본)에 남아 있던 그림입니다.
+하늘소 회원들이 대회, 전시회, 동아리 사업으로 만든 작품입니다. 1997년 하늘소 작품전시회 책자, SEEK SQUARE 2000 책자, 2004~2008년 모바일-디스플레이 NURI 엑스포 디렉터리 책자, 2006년 홈페이지의 [하늘소작품](https://web.archive.org/web/20060303234125/http://hanulso.knu.ac.kr/project/project.php) 페이지를 옮기며 설명을 줄였습니다. 참여자는 당시 표기대로 기수와 이름을 적었습니다. 작품 화면은 옛 홈페이지 소스(2011년 무렵 작업 사본)에 남아 있던 그림과, 전시 책자 사진에서 잘라 낸 그림입니다.
 
 > 이 목록은 2008년에서 멈춰 있습니다. 그 뒤의 작품이나 설명이 비어 있는 작품을 아시는 분은 [GitHub 이슈](https://github.com/hanulso/hanulso.github.io/issues)로 올려 주세요.
 {: .prompt-tip }
@@ -114,11 +114,17 @@ SEEK SQUARE 2000 책자로 보이는 하늘소 소개 쪽에 실린 작품입니
   회원 가입 뒤 친구와 메시지를 주고받는 인스턴트 메신저. 데이터베이스와 연동했고 다음 판에 메일 자동 확인을 더할 계획이었다.
 - **표돌이** — 13기 윤미경, 13기 이혜정
 
+  ![표돌이 화면](/assets/img/works/2000-pyodori.jpg){: width="367" height="280" .normal }
+
   MFC로 만든 차트 프로그램. 값만 넣으면 간격을 알아서 맞춰 꺾은선, 파이, 도넛, 가로 막대, 세로 막대, 방사형 그래프를 그린다.
 - **X-I'm busy typing** — 13기 박지은, 13기 이보경
 
+  ![X-I'm busy typing 화면](/assets/img/works/2000-busy-typing.jpg){: width="296" height="255" .normal }
+
   GTK로 만든 X 윈도용 타자 게임. 혼자 하기에 더해 1:1 네트워크 대전을 지원했다.
 - **'하늘' for windows** — 14기 손주동, 14기 최희백, 14기 황병구, 14기 이상건
+
+  !['하늘' for windows 화면](/assets/img/works/2000-hanul-windows.jpg){: width="300" height="267" .normal }
 
   레이어, 여러 그림 동시 열기 같은 기능을 더해 일반인도 쉽게 쓰게 만든 윈도용 그림판.
 
@@ -219,23 +225,37 @@ SEEK SQUARE 2000 책자로 보이는 하늘소 소개 쪽에 실린 작품입니
   PHP, MySQL, Flash.
 - **풀피리** — 조용호
 
+  ![풀피리 화면](/assets/img/works/2005-pulpiri.jpg){: width="411" height="236" .normal }
+
   허밍으로 부른 멜로디를 악보로 바꿔 주는 프로그램. 제목을 몰라도 멜로디로 노래를 찾는 서비스의 첫 단계로 만들었다.
 - **MSCS (Many SOC and Circuit Simulator)** — 곽준욱, 최희백
+
+  ![MSCS (Many SOC and Circuit Simulator) 화면](/assets/img/works/2005-mscs.jpg){: width="423" height="256" .normal }
 
   여러 SOC와 회로를 직접 만들지 않고 시험해 보는 시뮬레이터. 소자를 모듈로 더할 수 있고, Qt와 GNU C로 만들어 여러 운영체제로 옮길 수 있다.
 - **Waypoint Robot System** — 한승욱
 
+  ![Waypoint Robot System 화면](/assets/img/works/2005-waypoint-robot.jpg){: width="294" height="220" .normal }
+
   사용자가 정한 경로를 따라가며 장애물을 피하는 로봇. ARM 보드의 임베디드 리눅스로 화면을 만들고 무선 시리얼로 지시했다. SEEK Square 2005 동아리 작품부문 은상.
 - **Last Exile (마지막 망명자)** — 박경렬, 이승환
+
+  ![Last Exile (마지막 망명자) 화면](/assets/img/works/2005-last-exile.jpg){: width="346" height="274" .normal }
 
   여러 키를 조합해 다양한 기술을 쓰는 슈팅 게임.
 - **3D 사격게임** — 최희백
 
+  ![3D 사격게임 화면](/assets/img/works/2005-3d-shooting.jpg){: width="320" height="248" .normal }
+
   수업에서 배운 3D 그래픽스로 C#과 DirectX를 써서 만든 FPS 게임. 3D 모델, 애니메이션, 지형, 사운드를 직접 구현했다.
 - **하늘목** — 오한빈, 김경륜
 
+  ![하늘목 화면](/assets/img/works/2005-hanulmok.jpg){: width="387" height="248" .normal }
+
   FTP 서버의 그림과 사진을 내려받기 전에 미리 볼 수 있는 FTP 클라이언트.
 - **즐거운 합주** — 김준호, 김새롬, 장지훈
+
+  ![즐거운 합주 화면](/assets/img/works/2005-ensemble.jpg){: width="321" height="243" .normal }
 
   피아노 건반처럼 배치한 키로 악보를 보며 연주하는 리듬 게임. 여러 사람이 서로 다른 악기로 합주할 수 있다.
 
@@ -243,14 +263,22 @@ SEEK SQUARE 2000 책자로 보이는 하늘소 소개 쪽에 실린 작품입니
 
 - **무선 네트워크 무인 플랫폼** — 조용호, 차정현, 한승욱
 
+  ![무선 네트워크 무인 플랫폼 화면](/assets/img/works/2006-uav-platform.jpg){: width="445" height="309" .normal }
+
   RC 헬기로 수평 제어부터 자율 비행을 목표로 한 무인기. 자이로와 가속도 센서로 자세를, 초음파 센서로 장애물과 고도를 알아냈다.
 - **스타바둑** — 곽준욱, 최희백, 곽효석
+
+  ![스타바둑 화면](/assets/img/works/2006-star-baduk.jpg){: width="328" height="244" .normal }
 
   온라인 바둑. 채팅, 화상 대국, 컴퓨터와 두기, 대국방을 통한 바둑 교육을 지원했다.
 - **곡두체스** — 오한빈
 
+  ![곡두체스 화면](/assets/img/works/2006-gokdu-chess.jpg){: width="336" height="283" .normal }
+
   증강현실 체스. 마커가 그려진 판과 말을 카메라로 비추면 화면에 3D 말이 나타나고 테마를 바꿀 수 있다. Amire 저작 도구를 썼다. 시크스퀘어 2006 최우수상.
 - **KNU EPSN (프리미어리그 문자 중계)** — 한승욱, 오한빈
+
+  ![KNU EPSN (프리미어리그 문자 중계) 화면](/assets/img/works/2006-knu-epsn.jpg){: width="480" height="344" .normal }
 
   프리미어리그 축구 문자 중계 프로그램. 하이라이트 그래픽, 단축키 입력, 경기장 위 화이트보드로 포털 문자 중계보다 자세히 전하려 했다.
 
@@ -258,11 +286,17 @@ SEEK SQUARE 2000 책자로 보이는 하늘소 소개 쪽에 실린 작품입니
 
 - **셈틀날틀** — 차정현, 최우승, 최종문
 
+  ![셈틀날틀 화면](/assets/img/works/2007-semtle-naltle.jpg){: width="480" height="288" .normal }
+
   지능형 무인 항공기에 도전한 작품. 자이로 센서로 기체 기울기를 측정했다.
 - **하늘보기** — 김현동, 서정인
 
+  ![하늘보기 화면](/assets/img/works/2007-haneul-bogi.jpg){: width="455" height="271" .normal }
+
   하늘 사진과 미리 저장한 기후 데이터로 날씨를 예측하는 프로그램.
 - **하늘일기** — 김동근, 김창곤
+
+  ![하늘일기 화면](/assets/img/works/2007-haneul-ilgi.jpg){: width="450" height="291" .normal }
 
   달력 일정, 알람, RSS 리더를 묶은 일정 관리 프로그램.
 
@@ -270,10 +304,16 @@ SEEK SQUARE 2000 책자로 보이는 하늘소 소개 쪽에 실린 작품입니
 
 - **IR 센서를 이용한 컴퓨터 어시스턴트** — 김창곤, 김경륜
 
+  ![IR 센서를 이용한 컴퓨터 어시스턴트 화면](/assets/img/works/2008-ir-assistant.jpg){: width="480" height="253" .normal }
+
   TV나 에어컨 리모컨으로 컴퓨터를 조작하게 한 프로그램. 리모컨 신호를 윈도 명령과 사용자 매크로에 연결한다. 시크스퀘어 2008 최우수상.
 - **X-Copter** — 차정현, 배현진
 
+  ![X-Copter 화면](/assets/img/works/2008-x-copter.jpg){: width="480" height="273" .normal }
+
   4축 블레이드 비행기 DragonFlyer에 자이로 센서를 달아 수평 제어를 한 작품. FreeRTOS를 포팅해 멀티태스킹을 쓰고, 포토커플러로 제어부와 모터 전원을 분리했다.
 - **맛의 달인** — 김동근, 김현동, 임진혁, 서정인
+
+  ![맛의 달인 화면](/assets/img/works/2008-cooking-arm.jpg){: width="480" height="282" .normal }
 
   관절 모터로 움직이는 로봇 팔이 정해진 패턴과 타이머로 간단한 요리를 하는 작품. 가사 노동 시간을 줄이려는 생각에서 출발했다.
