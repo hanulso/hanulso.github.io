@@ -45,7 +45,7 @@ order: 6
 </div>
 
 <script id="booklet-data" type="application/json">{{ site.data.booklets | jsonify }}</script>
-<script src="/assets/js/vendor/page-flip-2.0.7.browser.js"></script>
+<script src="/assets/js/page-flip/page-flip-2.0.7.browser.js"></script>
 <script src="/assets/js/booklets.js"></script>
 
 책장 넘김은 [StPageFlip](https://github.com/Nodlik/StPageFlip)(MIT 라이선스)을 썼습니다.

@@ -15,7 +15,7 @@
 | `_tabs/works.md` | 작품 |
 | `_tabs/people.md` | 하늘소 사람들 (명단은 `_data/people.yml`) |
 | `_tabs/press.md` | 언론 기록 (스크린샷은 `assets/img/press/`, 원본 보관은 저장소 밖) |
-| `_tabs/materials.md` | 자료: 옛 책자 넘겨 보기 (목록은 `_data/booklets.yml`, 쪽 그림은 `assets/img/booklets/`, 넘김 스크립트는 `assets/js/booklets.js`)
+| `_tabs/materials.md` | 자료: 옛 책자 넘겨 보기 (목록은 `_data/booklets.yml`, 쪽 그림은 `assets/img/booklets/`, 넘김 스크립트는 `assets/js/booklets.js`, 라이브러리는 `assets/js/page-flip/`)
 | `_tabs/community.md` | 커뮤니티 링크, 수정 요청·제보 방법, 운영진 |
 | `.github/ISSUE_TEMPLATE/` | 이슈 양식 (수정 요청, 기록·소식 제보) |
 | `_posts/` | 소식과 기록 글 |
